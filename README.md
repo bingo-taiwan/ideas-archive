@@ -39,6 +39,29 @@
 
 ---
 
+### 3. Clawdbot 商業應用 AI 機器人
+
+使用 Clawdbot v2026.1.24 建立小規模商業應用的 AI 機器人，評估 Claude Max vs 開源模型（Ollama + RTX 3090）兩種技術方案。
+
+**專案狀態**：方案評估階段
+
+**詳細文件**：
+- [clawdbot-commercial-bot-pending.md](./clawdbot-commercial-bot-pending.md) - 方案評估與計劃
+
+**核心決策**：
+- **方案 A**：Claude Max（雲端，月費 NT$ 650）
+- **方案 B**：Ollama + RTX 3090（本地，硬體投資約 NT$ 44,000）
+- **方案 C**：混合方案（彈性切換，推薦）
+
+**商業應用場景**：
+- LINE Bot 客服系統
+- 企業內部助手（Slack/Telegram）
+- 自動化工作流
+
+**預計時間**：2026-02 決定方案，2026-03 開始部署
+
+---
+
 ## 🎨 專案 1 詳細資訊：動漫元素卡片
 
 #### 🎯 核心理念
@@ -126,6 +149,7 @@ ideas-archive/
 ├── PENDING.md                             # 專案 1：動漫元素卡片 - 待辦事項
 ├── CHANGELOG.md                           # 專案 1：動漫元素卡片 - 版本記錄
 ├── auruma-linux-migration-pending.md     # 專案 2：Auruma Linux 遷移計劃
+├── clawdbot-commercial-bot-pending.md    # 專案 3：Clawdbot 商業機器人方案評估
 ├── PUSH_TO_GITHUB.md                     # GitHub 推送指南
 └── .gitignore                            # Git 忽略規則
 ```
@@ -155,6 +179,18 @@ ideas-archive/
 - 決定郵件服務處理方式
 - 決定資料庫遷移方案
 - 選定安裝時間並執行遷移
+
+### 專案 3：Clawdbot 商業 AI 機器人
+
+**詳見**：[clawdbot-commercial-bot-pending.md](./clawdbot-commercial-bot-pending.md)
+
+主要待辦：
+- 決定技術方案（Claude Max / Ollama / 混合）
+- 評估 Auruma 硬體相容性（RTX 3090）
+- 採購硬體（如選擇方案 B/C）
+- 安裝 Clawdbot v2026.1.24
+- 設定訊息平台整合（LINE/Telegram/Slack）
+- 開發商業功能與整合
 
 ---
 
