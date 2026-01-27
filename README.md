@@ -18,6 +18,29 @@
 - [PENDING.md](./PENDING.md) - 待辦事項與靈感記錄
 - [CHANGELOG.md](./CHANGELOG.md) - 版本變更記錄
 
+---
+
+### 2. Auruma Server Linux 遷移計劃
+
+將辦公室 Auruma-Server 從 Windows Server 2016 遷移到 Linux Ubuntu，並安裝各種應用與服務（包含 Clawdbot）。
+
+**專案狀態**：規劃階段
+
+**詳細文件**：
+- [auruma-linux-migration-pending.md](./auruma-linux-migration-pending.md) - 遷移計劃與待辦事項
+
+**主要目標**：
+- 遷移到 Ubuntu Server 24.04 LTS
+- 安裝 Clawdbot（個人 AI 助手平台）
+- 部署 Docker + PostgreSQL + Nginx
+- 設定監控與備份系統
+
+**預計時間**：2026-02 開始規劃，2026-03 執行遷移
+
+---
+
+## 🎨 專案 1 詳細資訊：動漫元素卡片
+
 #### 🎯 核心理念
 
 - **跨 IP 整合**：不限於單一動漫，涵蓋所有經典動漫作品
@@ -99,11 +122,12 @@
 
 ```
 ideas-archive/
-├── README.md                    # 本檔案（倉庫總覽）
-├── PENDING.md                   # 動漫元素卡片：待辦事項
-├── CHANGELOG.md                 # 動漫元素卡片：版本記錄
-├── PUSH_TO_GITHUB.md           # GitHub 推送指南
-└── .gitignore                  # Git 忽略規則
+├── README.md                              # 本檔案（倉庫總覽）
+├── PENDING.md                             # 專案 1：動漫元素卡片 - 待辦事項
+├── CHANGELOG.md                           # 專案 1：動漫元素卡片 - 版本記錄
+├── auruma-linux-migration-pending.md     # 專案 2：Auruma Linux 遷移計劃
+├── PUSH_TO_GITHUB.md                     # GitHub 推送指南
+└── .gitignore                            # Git 忽略規則
 ```
 
 未來會新增更多專案的 pending 文件。
@@ -112,7 +136,7 @@ ideas-archive/
 
 ## 🔨 目前待優化項目總覽
 
-### 動漫元素卡片專案
+### 專案 1：動漫元素卡片
 
 **詳見**：[PENDING.md](./PENDING.md)
 
@@ -120,6 +144,17 @@ ideas-archive/
 - Gemini 圖片品質優化（原子序號遺漏問題）
 - 跨 IP 角色配對表設計（3 種方案待決定）
 - 動漫 IP 清單確定（10-15 個 IP）
+
+### 專案 2：Auruma Server Linux 遷移
+
+**詳見**：[auruma-linux-migration-pending.md](./auruma-linux-migration-pending.md)
+
+主要待辦：
+- 完成遷移計劃細節
+- 備份所有資料
+- 決定郵件服務處理方式
+- 決定資料庫遷移方案
+- 選定安裝時間並執行遷移
 
 ---
 
