@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# 圖片輸出（太大，不要放進 repo）
+output/
+*.png
+*.jpg
+*.jpeg
+
+# API Keys
+api_keys.json
+.env
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 臨時檔案
+*.tmp
+*.bak
+*~
