@@ -16,6 +16,27 @@
 
 ---
 
+## [v0.2] - 2026-02-02
+
+### 新增
+- **專案 4：Photo Backup Orchestrator**（雲端相片備份系統）
+  - Google Photos 備份模組（OAuth 2.0 + Photos Library API）
+  - iCloud Photos 備份模組（封裝 icloudpd，支援 2FA）
+  - 智慧去重模組（SHA-256 hash 比對）
+  - 自動歸檔功能（依拍攝日期整理）
+  - 即時進度顯示（rich 套件）
+  - SQLite 檔案索引
+  - CLI 介面與 Windows 啟動腳本
+  - 詳細文件：[photo-backup-orchestrator-pending.md](./photo-backup-orchestrator-pending.md)
+
+### 技術細節
+- Python 3.10+
+- 核心依賴：google-api-python-client, icloudpd, rich, tqdm
+- 程式碼位置：`C:\photo-backup-orchestrator`
+- NAS 備份路徑：`X:\photos_archive\`
+
+---
+
 ## [v0.1-alpha] - 2026-01-27
 
 ### 新增

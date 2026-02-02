@@ -2,7 +2,7 @@
 
 > 記錄各種專案靈感、pending 的想法、待優化項目、未來計劃
 
-**最後更新**：2026-01-27
+**最後更新**：2026-02-02
 
 ---
 
@@ -59,6 +59,29 @@
 - 自動化工作流
 
 **預計時間**：2026-02 決定方案，2026-03 開始部署
+
+---
+
+### 4. 雲端相片備份系統 (Photo Backup Orchestrator)
+
+將 Google Photos 和 iCloud Photos 的相片與影片自動備份到 Synology NAS，提供去重與歸檔功能。
+
+**專案狀態**：✅ v1.0 基礎架構已完成
+
+**詳細文件**：
+- [photo-backup-orchestrator-pending.md](./photo-backup-orchestrator-pending.md) - 專案說明與待辦事項
+
+**核心功能**：
+- Google Photos 備份（OAuth 2.0 + Photos Library API）
+- iCloud Photos 備份（icloudpd + 2FA）
+- SHA-256 智慧去重
+- 依拍攝日期自動歸檔
+- 即時進度顯示（rich 套件）
+- SQLite 檔案索引
+
+**程式碼位置**：`C:\photo-backup-orchestrator`
+
+**NAS 備份路徑**：`X:\photos_archive\`
 
 ---
 
@@ -150,6 +173,7 @@ ideas-archive/
 ├── CHANGELOG.md                           # 專案 1：動漫元素卡片 - 版本記錄
 ├── auruma-linux-migration-pending.md     # 專案 2：Auruma Linux 遷移計劃
 ├── clawdbot-commercial-bot-pending.md    # 專案 3：Clawdbot 商業機器人方案評估
+├── photo-backup-orchestrator-pending.md  # 專案 4：雲端相片備份系統
 ├── PUSH_TO_GITHUB.md                     # GitHub 推送指南
 └── .gitignore                            # Git 忽略規則
 ```
@@ -191,6 +215,16 @@ ideas-archive/
 - 安裝 Clawdbot v2026.1.24
 - 設定訊息平台整合（LINE/Telegram/Slack）
 - 開發商業功能與整合
+
+### 專案 4：雲端相片備份系統
+
+**詳見**：[photo-backup-orchestrator-pending.md](./photo-backup-orchestrator-pending.md)
+
+主要待辦：
+- 設定 Google Cloud 專案並取得 OAuth 憑證
+- 完成首次 Google Photos 同步測試
+- 完成首次 iCloud 認證與同步測試
+- 設定 Windows Task Scheduler 定時執行
 
 ---
 
@@ -296,4 +330,4 @@ ideas-archive/
 
 ---
 
-**最後更新**：2026-01-27
+**最後更新**：2026-02-02
