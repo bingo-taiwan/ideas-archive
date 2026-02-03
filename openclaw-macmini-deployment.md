@@ -103,9 +103,48 @@ echo "ssh-rsa AAAAB3NzaC1yc2E... bingo@mynet.com.tw" >> ~/.ssh/authorized_keys
 
 | 項目 | 狀態 | 說明 |
 |------|------|------|
-| LaunchAgent | ⏸️ 待設定 | 讓 Gateway 開機自啟 |
+| LaunchAgent | ✅ 已完成 | Gateway 開機自啟 |
 | Claude Max 認證 | ⏸️ 等 3 天 | Token 回血後再設定 |
 | Webhook URL | ⏸️ 待設定 | 需公開 URL（ngrok 或網域） |
+
+---
+
+## LaunchAgent 設定（已完成）
+
+### plist 檔案位置
+
+`~/Library/LaunchAgents/ai.openclaw.gateway.plist`
+
+### 重點：環境變數必須寫在 plist 中
+
+LaunchAgent 不會載入 `~/.zshrc`，所以 LINE 環境變數必須直接寫在 plist：
+
+```xml
+<key>EnvironmentVariables</key>
+<dict>
+    <key>PATH</key>
+    <string>/Users/michelle/.nvm/versions/node/v22.22.0/bin:/usr/local/bin:/usr/bin:/bin</string>
+    <key>HOME</key>
+    <string>/Users/michelle</string>
+    <key>LINE_CHANNEL_ACCESS_TOKEN</key>
+    <string>your-token-here</string>
+    <key>LINE_CHANNEL_SECRET</key>
+    <string>your-secret-here</string>
+</dict>
+```
+
+### 管理指令
+
+```bash
+# 載入
+launchctl load ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+
+# 卸載
+launchctl unload ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+
+# 查看日誌
+tail -f /tmp/openclaw-gateway.log
+```
 
 ### Claude Max 認證步驟（3 天後執行）
 
