@@ -2,7 +2,7 @@
 
 > 記錄各種專案靈感、pending 的想法、待優化項目、未來計劃
 
-**最後更新**：2026-02-02
+**最後更新**：2026-02-03
 
 ---
 
@@ -48,18 +48,6 @@
 **詳細文件**：
 - [clawdbot-commercial-bot-pending.md](./clawdbot-commercial-bot-pending.md) - 方案評估與計劃
 
-**核心決策**：
-- **方案 A**：Claude Max（雲端，月費 NT$ 650）
-- **方案 B**：Ollama + RTX 3090（本地，硬體投資約 NT$ 44,000）
-- **方案 C**：混合方案（彈性切換，推薦）
-
-**商業應用場景**：
-- LINE Bot 客服系統
-- 企業內部助手（Slack/Telegram）
-- 自動化工作流
-
-**預計時間**：2026-02 決定方案，2026-03 開始部署
-
 ---
 
 ### 4. 雲端相片備份系統 (Photo Backup Orchestrator)
@@ -82,6 +70,29 @@
 **程式碼位置**：`C:\photo-backup-orchestrator`
 
 **NAS 備份路徑**：`X:\photos_archive\`
+
+---
+
+### 5. OpenClaw Mac mini 部署
+
+在 Michelle 的 Mac mini (M 系列) 上部署 OpenClaw + LINE Bot，作為個人 AI 助手平台。
+
+**專案狀態**：✅ 基礎部署完成
+
+**詳細文件**：
+- [openclaw-macmini-deployment.md](./openclaw-macmini-deployment.md) - 部署記錄與踩坑經驗
+
+**已完成**：
+- SSH 免密碼連線（金鑰認證）
+- Node.js 22.22.0（via nvm）
+- OpenClaw 2026.2.1
+- LINE Bot「歐噴克勞」(@951brjwq)
+- Bun + qmd（本地搜尋引擎）
+
+**待完成**：
+- Claude Max 認證（等 token 回血）
+- LaunchAgent 自動啟動
+- Webhook 公開 URL
 
 ---
 
@@ -174,6 +185,7 @@ ideas-archive/
 ├── auruma-linux-migration-pending.md     # 專案 2：Auruma Linux 遷移計劃
 ├── clawdbot-commercial-bot-pending.md    # 專案 3：Clawdbot 商業機器人方案評估
 ├── photo-backup-orchestrator-pending.md  # 專案 4：雲端相片備份系統
+├── openclaw-macmini-deployment.md        # 專案 5：OpenClaw Mac mini 部署
 ├── PUSH_TO_GITHUB.md                     # GitHub 推送指南
 └── .gitignore                            # Git 忽略規則
 ```
@@ -225,6 +237,15 @@ ideas-archive/
 - 完成首次 Google Photos 同步測試
 - 完成首次 iCloud 認證與同步測試
 - 設定 Windows Task Scheduler 定時執行
+
+### 專案 5：OpenClaw Mac mini 部署
+
+**詳見**：[openclaw-macmini-deployment.md](./openclaw-macmini-deployment.md)
+
+主要待辦：
+- Claude Max 認證（等 3 天 token 回血後執行）
+- 設定 LaunchAgent 讓 Gateway 開機自啟
+- 設定 Webhook 公開 URL（ngrok 或網域）
 
 ---
 
@@ -330,4 +351,4 @@ ideas-archive/
 
 ---
 
-**最後更新**：2026-02-02
+**最後更新**：2026-02-03
